@@ -1,7 +1,47 @@
-.chat-list , .chat-conversation
-  padding: 0 4px
-  width: 100px
-  border-left: 1px solid #000
-  text-align: center
-  height: 24px
+@import "../css/vars.sass"
+*
+  box-sizing: border-box
+div
+  height: 23px
   line-height: 24px
+  font-size: 12px
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.51)
+  text-align: center
+  .button
+    transition: width 1s
+    cursor: pointer
+    padding: 0 20px
+    width: 100px
+    &:hover
+      background: $background-inverted
+.sprint
+  border-bottom-left-radius: 4px
+.chat-list
+  border-bottom-right-radius: 4px
+.chat-list , .chat-conversation
+  border-left: 1px solid darken($titlebar-color, 34%)
+.chat-conversation
+  .overlay
+    visibility: hidden
+    opacity: 0
+    width: 102px
+    padding: 0 20px
+    border: 1px solid darken($titlebar-color, 34%)
+    background: $bg-color
+    transition: all 1s
+    display: block
+    margin: 0
+    height: auto
+    max-height: 70vh
+    position: absolute
+    right: 111px
+    bottom: 34px
+    overflow-y: auto
+    overflow-x: hidden
+  &.active
+    .button
+      width: 200px
+    .overlay
+      opacity: 1
+      width: 202px
+      visibility: visible

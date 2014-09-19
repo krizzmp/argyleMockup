@@ -1,8 +1,33 @@
-<polymer-element name="status-bar" noscript layout horizontal>
+<polymer-element name="status-bar" layout horizontal>
     <template>
         <link rel="stylesheet" href="status-bar.css">
-        <div flex></div>
-        <div class="chat-conversation">kristoffer</div>
-        <div class="chat-list">chat</div>
+        <div class="sprint" flex>5 days left of sprint</div>
+        <div class="chat-conversation active">
+            <div class="button" on-tap="{{test}}">kristoffer</div>
+            <div class="overlay">
+                test <br/>
+                test <br/>
+                test <br/>
+                test <br/>
+                test <br/>
+                test <br/>
+                test <br/>
+            </div>
+        </div>
+        <div class="chat-list">
+            <div class="button">chat</div>
+            <div class="overlay">
+                test
+            </div>
+        </div>
     </template>
+    <script>
+        Polymer({
+            // properties and methods here
+            test: function (e) {
+                $(e.target.parentElement).toggleClass("active");
+
+            }
+        });
+    </script>
 </polymer-element>

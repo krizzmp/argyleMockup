@@ -1,10 +1,15 @@
 * {
   box-sizing: border-box; }
 
+html {
+  height: 100vh;
+  overflow-x: hidden; }
+
 body {
   display: flex;
   direction: column;
-  height: 100vh; }
+  height: 100vh;
+  overflow-x: hidden; }
 
 .window {
   background: #F5F5F5;
@@ -12,9 +17,10 @@ body {
   margin: 10px;
   box-shadow: 0px 0px 30px #858585;
   border: 1px solid #6e6e6e;
-  border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 4px 4px;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  overflow: hidden; }
 
 .toolbar {
   border-radius: 4px 4px 0 0;
@@ -33,23 +39,23 @@ body {
     float: right; }
   .toolbar .space {
     flex: 1;
-    text-align: center; }
-    .toolbar .space * {
-      display: inline; }
+    text-align: center;
+    display: inline; }
   .toolbar .left {
-    display: inline-flex; }
-    .toolbar .left * {
-      display: inline-block; }
+    display: inline-flex;
+    display: inline-block; }
 
 my-element {
   flex: 1;
-  overflow-x: scroll;
-  overflow-y: scroll;
+  overflow-x: auto;
+  overflow-y: auto;
   display: flex;
   flex-direction: row; }
 
 status-bar {
   background: linear-gradient(to bottom, #DEDEDE, #b5b5b5);
-  height: 24px; }
+  height: 24px;
+  border-radius: 0 0 4px 4px;
+  border-top: 1px solid #6e6e6e; }
 
 /*# sourceMappingURL=main.css.map */
