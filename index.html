@@ -8,64 +8,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="import" href="bower_components/polymer/polymer.html">
+    <link rel="import" href="custom_components/board.html">
+    <link rel="import" href="custom_components/status-bar.html">
 </head>
 <body>
     <div class="window">
         <div class="toolbar">
-
             <img src="img/close.png" class="close">
             <div class="space left"><strong>argyle </strong> &NonBreakingSpace;project management</div>
             <div class="left">
-                <div class="button active" id="chat">Messages</div>
-                <div class="button " id="project">Project board</div>
-                <div class="button" id="stats">Statistics</div>
+                <!--<div class="button active" id="chat">Messages</div>-->
+                <!--<div class="button " id="project">Project board</div>-->
+                <!--<div class="button" id="stats">Statistics</div>-->
             </div>
             <div class="space right"></div>
             <img src="img/maximize.png" class="maximize">
         </div>
-        <div class="board-page ">
-            <div class="column">
-                <div class="title">IceBox</div>
-                <div class="drag-box">
-                    <div class="drop-zone"></div>
-                </div>
-                <div class="drag-box" draggable="true" id="us1">
-                    <div class="user-story">
-                        <div class="title">Projectboard <span class="points">1</span></div>
-                        As a project manager i would like to be able to organize my requirements on a virtual SCRUM board.
-                    </div>
-                    <div class="drop-zone"></div>
-                </div>
-                <div class="drag-box" draggable="true" id="us2">
-                    <div class="user-story">
-                        <div class="title">Projectboard <span class="points">2</span></div>
-                        As a project manager i would like to be able to organize my requirements on a virtual SCRUM board.
-                    </div>
-                    <div class="drop-zone"></div>
-                </div>
-                <div class="add">+</div>
-            </div>
-            <div class="column">
-                <div class="title">Backlog</div>
-                <div class="drag-box">
-                    <div class="drop-zone"></div>
-                </div>
-                <div class="drag-box" draggable="true" id="us3">
-                    <div class="user-story">
-                        <div class="title">Projectboard <span class="points">3</span></div>
-                        As a project manager i would like to be able to organize my requirements on a virtual SCRUM board.
-                    </div>
-                    <div class="drop-zone"></div>
-                </div>
-                <div class="add">+</div>
-            </div>
-            <div class="column new">
-                <div class="user-story">
-                    +
-                </div>
-            </div>
-        </div>
-        <div class="chat active">
+        <my-element class="active"></my-element>
+        <!--<div class="chat">
             <div class="conversation"></div>
             <div class="people">
                 <div class="person open">All</div>
@@ -75,14 +36,14 @@
                 <div class="person">Jesper</div>
                 <div class="person">Jens</div>
             </div>
-        </div>
+        </div>-->
+        <status-bar></status-bar>
     </div>
-
-
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="bower_components/platform/platform.js"></script>
 </body>
 </html>

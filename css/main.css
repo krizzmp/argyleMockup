@@ -40,112 +40,16 @@ body {
     display: inline-flex; }
     .toolbar .left * {
       display: inline-block; }
-  .toolbar .button {
-    height: 47px;
-    margin: 0;
-    border-left: 1px solid #878787;
-    padding: 0 10px; }
-    .toolbar .button.active {
-      background: linear-gradient(to bottom, #9c9c9c, #b5b5b5); }
-    .toolbar .button:last-of-type {
-      border-right: 1px solid #a1a1a1; }
 
-.board-page, .chat {
-  flex: 0;
+my-element {
+  flex: 1;
   overflow-x: scroll;
   overflow-y: scroll;
   display: flex;
-  flex-direction: row;
-  visibility: hidden; }
-  .board-page .column, .chat .column {
-    width: 260px;
-    min-width: 260px;
-    margin: 4px;
-    padding: 4px;
-    border-right: 1px solid #e8e8e8; }
-    .board-page .column > .title:hover:after, .chat .column > .title:hover:after {
-      content: "edit ";
-      float: right;
-      font-size: 12px;
-      line-height: 14px;
-      margin-right: 4px; }
-  .board-page .add, .chat .add {
-    text-align: center; }
-  .board-page .user-story, .board-page .add, .chat .user-story, .chat .add {
-    background: #f2f2f2;
-    border: 1px solid #f0f0f0;
-    border-radius: 4px;
-    padding: 4px;
-    font-size: 10px;
-    line-height: 12px; }
-    .board-page .user-story:hover, .board-page .add:hover, .chat .user-story:hover, .chat .add:hover {
-      background: #e8e8e8;
-      border: 1px solid #e6e6e6; }
-    .board-page .user-story .title, .board-page .add .title, .chat .user-story .title, .chat .add .title {
-      font-size: 12px;
-      line-height: 14px;
-      margin-bottom: 6px; }
-      .board-page .user-story .title .points, .board-page .add .title .points, .chat .user-story .title .points, .chat .add .title .points {
-        float: right; }
-  .board-page .new, .chat .new {
-    border-right: none; }
-    .board-page .new .user-story, .chat .new .user-story {
-      box-sizing: content-box;
-      background-color: #F5F5F5;
-      border-color: #F5F5F5;
-      font-size: 1em;
-      margin: 0;
-      padding: 0; }
-      .board-page .new .user-story:hover, .chat .new .user-story:hover {
-        text-decoration: underline; }
-        .board-page .new .user-story:hover:before, .chat .new .user-story:hover:before {
-          content: "Add column "; }
+  flex-direction: row; }
 
-.drop-zone {
-  height: 1px;
-  margin-top: 4px; }
-
-.drag {
-  background: #e8e8e8;
-  height: 24px;
-  margin: 4px 0; }
-
-.active {
-  visibility: visible;
-  flex: 1; }
-
-.chat {
-  display: flex;
-  direction: column; }
-  .chat .people {
-    width: 128px;
-    background: #e3e3e3;
-    border-left: 1px solid #a6a6a6; }
-    .chat .people .person {
-      width: 116px;
-      height: 32px;
-      line-height: 24px;
-      background: #f8f8f8;
-      border: 1px solid #ededed;
-      margin: 4px;
-      margin-left: 8px;
-      border-radius: 4px;
-      padding: 4px; }
-      .chat .people .person.open:before {
-        content: "";
-        display: block;
-        width: 8px;
-        height: 8px;
-        background: #000;
-        margin-bottom: -9px;
-        transform: translate(-17.5px, 8px) rotate(45deg);
-        background: #F5F5F5;
-        border-top: 1px solid #a6a6a6;
-        border-right: 1px solid #a6a6a6; }
-      .chat .people .person:hover {
-        background: #ebebeb;
-        border: 1px solid #e8e8e8; }
-  .chat .conversation {
-    flex: 1; }
+status-bar {
+  background: linear-gradient(to bottom, #DEDEDE, #b5b5b5);
+  height: 24px; }
 
 /*# sourceMappingURL=main.css.map */
